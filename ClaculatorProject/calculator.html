@@ -1,0 +1,118 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" type="text/css" >
+    <style>
+      body  
+    {  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+    }  
+    .login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+    }  
+    h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+    }  
+    label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+    }  
+    #firstNumber{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    }  
+    #secNumber{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+    }  
+    #btnCalculate{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+    }  
+    span{  
+    color: white;  
+    font-size: 17px;  
+    }  
+    a{  
+    float: right;  
+    background-color: grey;  
+    } 
+    .result{
+      text-align: center;
+      padding: 20px 0px;
+      font-size: 20px;
+      background-color:#0e2c27;
+      color: rgb(248, 248, 248);
+    } 
+    .error{
+      color: red;
+    }
+    </style>   
+</head>    
+<body>    
+    <h2>Calculator</h2><br>    
+    <div class="login">     
+    <form id="login" method="get" action="login.php">    
+        <label><b>Number One :    
+        </b>    
+        </label>    
+        <input type="number" name="Uname" id="firstNumber" placeholder="Enter number one...">  
+        <br>  
+        <small class="error" id="numOneError">Number one is required!</small>
+        <br><br>    
+        <label><b>    Number Two : 
+        </b>    
+        </label>    
+        <input type="number" name="Pass" id="secNumber" placeholder="Enter number two...">    
+        <br>  
+        <small class="error" id="numTwoError">Number two is required!</small>
+        <br><br>    
+        <label><b>Operators :    
+        </b>    
+        </label>    
+        <div>
+          <select class="user-input" id="operation">
+            <option value="empty">Choose options</option>
+            <option value="add">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="division">/</option>
+          </select> 
+          <br>  
+          <small class="error" id="operatorError">Operator is required!</small>
+        </div>
+        <br><br>  
+        <input type="button" name="log" id="btnCalculate" value="Register Here">       
+        <br><br>  
+        <div class="result" id="result">0</div> 
+    </form>     
+</div>    
+</body>   
+<script src="./cal.js"></script> 
+</html>     
